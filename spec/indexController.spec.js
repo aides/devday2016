@@ -11,7 +11,7 @@ describe('IndexController', function() {
                 console.log(`ERROR ${JSON.stringify(err)}`);
                 done.fail();
             } else {
-                expect(res.text).toEqual('Hello World!');
+                expect(res.text).toEqual('Hello World 123!');
                 done();
             }
         });
