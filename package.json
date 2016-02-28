@@ -1,0 +1,25 @@
+{
+  "name": "devday2016",
+  "version": "1.0.0",
+  "description": "devday2016",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "node node_modules/jasmine-node/lib/jasmine-node/cli.js --forceexit ./spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aides/devday2016.git"
+  },
+  "author": "Mikhail Kuleshov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aides/devday2016/issues"
+  },
+  "homepage": "https://github.com/aides/devday2016#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "jasmine-node": "^1.14.5",
+    "supertest": "^1.2.0"
+  }
+}
