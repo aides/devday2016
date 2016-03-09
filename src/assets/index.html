@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="catApp">
+  <head>
+    <title>Cat App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  </head>
+  <body>
+      <div ng-controller="catCtrl" style="text-align:center">
+          <img ng-click="petCat()" ng-show="!isDone" src="cat.jpg" />
+          <div style="font-size: 50px; font-family:'Arial';">{{message}}</div>
+      </div>
+  </body>
+  <script>
+      angular
+        .module("catApp", [])
+        .controller("catCtrl", function($http, $scope) {
+          $scope.message = "Погладь кота!";
+          $scope.petCat = function() {
+              $http.post('/pet').then(function(response) {
+                $scope.isDone = true;
+                var count = response.data;
+                countWord = " раз";
+                if((count % 10 === 2 || count % 10 === 3 || count % 10 === 4)
+                    && (count !== 12) && (count !== 13) && (count !== 14))
+                    {
+                        countWord = " раза";
+                    }
+                    
+                $scope.message = "Поглажено " + count + countWord + "!";
+              });
+          };
+        });
+  </script>
+</html>

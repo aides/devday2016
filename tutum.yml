@@ -2,7 +2,12 @@ app:
   image: mkuleshov/devday2016
   ports: 
     - "80:9000"
+  links:
+    - db
   # More containers for load balancing
   target_num_containers: 1
   # Will always restart containers if it exits/crashes
+  restart: always
+db:
+  image: redis
   restart: always
