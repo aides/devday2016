@@ -4,7 +4,7 @@
   "description": "devday2016",
   "main": "src/server.js",
   "scripts": {
-    "test": "node node_modules/jasmine-node/lib/jasmine-node/cli.js ./spec"
+    "test": "node node_modules/jasmine-node/lib/jasmine-node/cli.js --forceexit ./spec"
   },
   "repository": {
     "type": "git",
