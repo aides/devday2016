@@ -11,7 +11,7 @@ client.set('catpetcount', 0, function(err, reply) {
 });
 
 router.get('/helloworld', function(req,res) {
-    res.send('Hello World!');
+    res.send('Hello World123!');
 });
 
 router.post('/pet', function(req, res) {
