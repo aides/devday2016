@@ -12,7 +12,7 @@ describe('IndexController', () => {
                 done.fail();
             } else {
                 // ASSERT
-                expect(res.text).toEqual('Hello World!');
+                expect(res.text).toEqual('Hello Dev Day 2016!');
                 done();
             }
         });

@@ -8,7 +8,7 @@ var client = redis.createClient({
 });
 
 router.get('/helloworld', (req,res) => {
-    res.send('Hello World!');
+    res.send('Hello Dev Day 2016!');
 });
 
 client.set('catpetcount', 0, (err, reply) => {
