@@ -1,8 +1,8 @@
 const request = require('supertest');
 const app = require('../src/app');
 
-describe('IndexController', function() {
-    it('should return \'Hello World!\'', function(done) {
+describe('IndexController', () => {
+    it('should return \'Hello World!\'', (done) => {
         request(app)
         .get('/helloworld')
         .expect(200)
@@ -12,7 +12,7 @@ describe('IndexController', function() {
                 done.fail();
             } else {
                 // ASSERT
-                expect(res.text).toEqual('Hello World123!');
+                expect(res.text).toEqual('Hello World!');
                 done();
             }
         });
