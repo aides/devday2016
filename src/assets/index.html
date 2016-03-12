@@ -6,7 +6,8 @@
   </head>
   <body>
       <div ng-controller="catCtrl" style="text-align:center">
-          <img ng-click="petCat()" ng-show="!isDone" src="cat.jpg" />
+          <img ng-click="petCat()" ng-show="!isDone" src="cat.jpg" onmouseout="this.src='cat.jpg'"
+               onmouseover="this.src='cat2.jpg'" />
           <div style="font-size: 50px; font-family:'Arial';">{{message}}</div>
       </div>
   </body>
@@ -25,7 +26,7 @@
                     {
                         countWord = " раза";
                     }
-                    
+
                 $scope.message = "Поглажено " + count + countWord + "!";
               });
           };
